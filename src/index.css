@@ -7,8 +7,10 @@ html {
 }
 
 body {
-  margin: 0;
   font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(200, 15%, 8%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

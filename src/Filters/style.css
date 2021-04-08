@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input {
+    padding: 15px;
+    color: hsl(0, 0%, 52%);
+    background-color: hsl(0, 0%, 100%);
+    border: none;
+    box-shadow: 0.5px 0.5px 2px 0px hsl(0, 0%, 52%);
+    width: 100%;
+}
+
+.flexElement {
+    flex: 0 1 300px;
+}

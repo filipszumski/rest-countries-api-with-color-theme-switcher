@@ -13,7 +13,7 @@ export const Filters = () => (
             as="select"
             name="region"
         >
-            <option value="" disabled selected hidden>Filter by Region</option>
+            <option value="" selected hidden>Filter by Region</option>
             <option value="africa">Africa</option>
             <option value="america">America</option>
             <option value="asia">Asia</option>

@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: ${({ theme }) => theme.fontFamily.primary};
-  font-size: ${({ theme }) => theme.fontSize.homepageItemsy};
+  font-size: ${({ theme }) => theme.fontSize.homepageItems}px;
   background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.text};
   -webkit-font-smoothing: antialiased;

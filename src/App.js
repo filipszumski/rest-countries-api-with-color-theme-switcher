@@ -8,9 +8,7 @@ function App() {
     <div className="App">
       <Header title="Where is the world?" />
       <Main>
-        <section>
           <Filters />
-        </section>
         <section>
         </section>
       </Main>

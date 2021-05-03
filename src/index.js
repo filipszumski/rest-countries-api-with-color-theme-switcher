@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { GlobalStyle } from "./GlobalStyle";
 import { lightTheme } from "./theme"
 import 'normalize.css';
-import App from './App';
+import App from './App/App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from 'styled-components';
 

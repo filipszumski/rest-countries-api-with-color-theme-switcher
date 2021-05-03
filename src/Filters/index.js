@@ -2,7 +2,7 @@ import React from "react";
 import { Wrapper, Input } from "./styled";
 
 export const Filters = () => (
-    <Wrapper className="container">
+    <Wrapper>
         <Input
             search
             placeholder='Seach for a country...'

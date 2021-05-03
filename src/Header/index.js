@@ -1,9 +1,9 @@
 import React from "react";
-import "./style.css";
+import { StyledHeader } from "./styled";
 
 export const Header = ({ title }) => (
-    <header className="header">
-        <h1 className="header__title">{title}</h1>
+    <StyledHeader>
+        <h1>{title}</h1>
         <span className="header__toggleThemeButton">Ligth Mode</span>
-    </header>
+    </StyledHeader>
 );

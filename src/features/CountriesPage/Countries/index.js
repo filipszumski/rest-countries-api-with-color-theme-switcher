@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrapper, Item, Flag, CountryName, CountryInfo, PropertyName } from "./styled";
+import { Wrapper, Item, Flag, CountryName, CountryInfo, PropertyName, StyledLink } from "./styled";
 
 
 export const Countries = ({ countriesData }) => {
@@ -16,13 +16,17 @@ export const Countries = ({ countriesData }) => {
                     )
                     : (
                         countriesData.countries.map((country) => (
+
                             <Item key={country.name}>
-                                <Flag src={country.flag} alt={country.name}></Flag>
-                                <CountryName>{country.name}</CountryName>
-                                <CountryInfo first><PropertyName >Population: </PropertyName>{country.population}</CountryInfo>
-                                <CountryInfo><PropertyName>Region: </PropertyName>{country.region}</CountryInfo>
-                                <CountryInfo last><PropertyName t>Capital: </PropertyName>{country.capital}</CountryInfo>
+                                <StyledLink to={`/countries/${country.name}`}>
+                                    <Flag src={country.flag} alt={country.name}></Flag>
+                                    <CountryName>{country.name}</CountryName>
+                                    <CountryInfo first><PropertyName >Population: </PropertyName>{country.population}</CountryInfo>
+                                    <CountryInfo><PropertyName>Region: </PropertyName>{country.region}</CountryInfo>
+                                    <CountryInfo last><PropertyName t>Capital: </PropertyName>{country.capital}</CountryInfo>
+                                </StyledLink>
                             </Item>
+
                         ))
                     )
             }

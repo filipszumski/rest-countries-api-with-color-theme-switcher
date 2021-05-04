@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Wrapper = styled.section`
     padding: 30px;
@@ -43,4 +44,9 @@ export const CountryInfo = styled.p`
 
 export const PropertyName = styled.span`
     font-weight: ${({ theme }) => theme.fontWeights.semiBold};
+`;
+
+export const StyledLink = styled(Link)`
+    color: ${({ theme }) => theme.colors.text};
+    text-decoration: none;
 `;

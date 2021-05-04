@@ -27,6 +27,7 @@ export const darkTheme = {
     ...lightTheme,
     colors: {
         background: "hsl(207, 26%, 17%)",
+        input: "hsl(207, 26%, 17%)",
         text: "hsl(0, 0%, 100%)",
         elements: "hsl(209, 23%, 22%)",
     }

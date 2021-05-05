@@ -1,15 +1,14 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.section`
-    padding: 30px;
+    margin: 30px;
     display: grid;
     gap: 50px;
     grid-template-columns: repeat(2, 1fr);
 
     @media(max-width: ${({ theme }) => theme.breakpoints.tablet}px){
         grid-template-columns: 1fr;
-        padding: 20px;
-        gap: 20px;
+        gap: 15px;
     }
 `;
 

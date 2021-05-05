@@ -2,11 +2,11 @@ import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Wrapper = styled.section`
-    padding: 30px;
+    margin: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 200px);
     justify-content: space-evenly;
-    gap: 50px
+    gap: 50px;
 `;
 
 export const Item = styled.div`

@@ -1,12 +1,12 @@
 import React from "react";
-import { StyledHeader } from "./styled";
+import { StyledHeader, HeaderTitle, StyledButton } from "./styled";
 
 export const Header = ({ title, themeName, toggleThemeName }) => {
 
     return (
         <StyledHeader>
-            <h1>{title}</h1>
-            <button onClick={() => toggleThemeName()}>{themeName} Theme</button>
+            <HeaderTitle>{title}</HeaderTitle>
+            <StyledButton onClick={() => toggleThemeName()}>{themeName}&nbsp;Theme</StyledButton>
         </StyledHeader>
     )
 };

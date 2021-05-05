@@ -44,3 +44,13 @@ export const CoutryDataContainer = styled.div`
         grid-template-columns: 1fr;
     }
 `;
+
+export const CountryName = styled.h2`
+    margin: 15px 0px;
+    font-size: ${({ theme }) => theme.fontSize.detailPageCountryName}px;
+    font-weight: ${({ theme }) => theme.fontWeights.extraBold}
+`;
+
+export const PropertyName = styled.span`
+    font-weight: ${({ theme }) => theme.fontWeights.semiBold};
+`;

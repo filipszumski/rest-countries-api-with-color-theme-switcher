@@ -1,5 +1,12 @@
 import React from "react";
-import { Wrapper, FlagContainer, Flag, CoutryDataContainer } from "./styled";
+import {
+    Wrapper,
+    FlagContainer,
+    Flag,
+    CoutryDataContainer,
+    CountryName,
+    PropertyName
+} from "./styled";
 
 export const Country = ({ selectedCountry }) => (
     <Wrapper>
@@ -7,19 +14,19 @@ export const Country = ({ selectedCountry }) => (
             <Flag src={selectedCountry.flag} alt={`${selectedCountry.name} Flag`}></Flag>
         </FlagContainer>
         <div>
-            <h2>{selectedCountry.name}</h2>
+            <CountryName>{selectedCountry.name}</CountryName>
             <CoutryDataContainer>
-                <p><span>Native Name: </span>{selectedCountry.nativeName}</p>
-                <p><span>Population: </span>{selectedCountry.population}</p>
-                <p><span>Region: </span>{selectedCountry.region}</p>
-                <p><span>Sub Region: </span>{selectedCountry.subregion}</p>
-                <p><span>Capital: </span>{selectedCountry.capital}</p>
-                <p><span>Native Top Level Domain: </span>{selectedCountry.topLevelDomain}</p>
-                <p><span>Currencies: </span>{selectedCountry.nativeName}</p>
-                <p><span>Languages: </span>{selectedCountry.nativeName}</p>
+                <p><PropertyName>Native Name: </PropertyName>{selectedCountry.nativeName}</p>
+                <p><PropertyName>Population: </PropertyName>{selectedCountry.population}</p>
+                <p><PropertyName>Region: </PropertyName>{selectedCountry.region}</p>
+                <p><PropertyName>Sub Region: </PropertyName>{selectedCountry.subregion}</p>
+                <p><PropertyName>Capital: </PropertyName>{selectedCountry.capital}</p>
+                <p><PropertyName>Native Top Level Domain: </PropertyName>{selectedCountry.topLevelDomain}</p>
+                <p><PropertyName>Currencies: </PropertyName>{selectedCountry.nativeName}</p>
+                <p><PropertyName>Languages: </PropertyName>{selectedCountry.nativeName}</p>
             </CoutryDataContainer>
             <div>
-                <p><span>Border Countires: </span></p>
+                <p><PropertyName>Border Countires: </PropertyName></p>
             </div>
         </div>
     </Wrapper>

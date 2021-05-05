@@ -1,5 +1,13 @@
 import React from "react";
-import { Wrapper, Item, Flag, CountryName, CountryInfo, PropertyName, StyledLink } from "./styled";
+import {
+    Wrapper,
+    Item,
+    Flag,
+    CountryName,
+    CountryInfo,
+    PropertyName,
+    StyledLink
+} from "./styled";
 import { toCountry } from "../../../../routes";
 
 export const Countries = ({ countriesData }) => {

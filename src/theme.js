@@ -6,8 +6,10 @@ export const lightTheme = {
         elements: "hsl(0, 0%, 100%)",
     },
     breakpoints: {
-        mobile: 375,
-        desktop: 1440,
+        mobile: 475,
+        tablet: 767,
+        desktop: 1023,
+        desktopL: 1440,
     },
     fontSize: {
         homepageItems: 14,

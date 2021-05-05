@@ -12,6 +12,9 @@ export const lightTheme = {
         desktopL: 1440,
     },
     fontSize: {
+        title: 24,
+        desktopCountryName: 16,
+        detailPageCountryName: 18,
         homepageItems: 14,
         detailPage: 16,
     },

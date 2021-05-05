@@ -21,6 +21,10 @@ body {
 #root {
   max-width: ${({ theme }) => theme.breakpoints.desktop}px;
   margin: 0px auto;
-  padding: 0px 20px;
+  padding: 15px 30px;
+
+  @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    padding: 15px 20px;
+  } 
 }
 `;

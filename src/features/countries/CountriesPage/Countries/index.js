@@ -1,6 +1,6 @@
 import React from "react";
 import { Wrapper, Item, Flag, CountryName, CountryInfo, PropertyName, StyledLink } from "./styled";
-
+import { toCountry } from "../../../../routes";
 
 export const Countries = ({ countriesData }) => {
 
@@ -18,7 +18,7 @@ export const Countries = ({ countriesData }) => {
                         countriesData.countries.map((country) => (
 
                             <Item key={country.name}>
-                                <StyledLink to={`/countries/${country.name}`}>
+                                <StyledLink to={toCountry(country.name)}>
                                     <Flag src={country.flag} alt={country.name}></Flag>
                                     <CountryName>{country.name}</CountryName>
                                     <CountryInfo first><PropertyName >Population: </PropertyName>{country.population}</CountryInfo>

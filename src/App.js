@@ -8,6 +8,7 @@ import { useCountriesData } from "./features/useCountriesData";
 import { Header } from "./common/Header";
 import { useTheme } from "./useTheme";
 import { darkTheme, lightTheme } from "./theme";
+import { toCountries, toCountry } from "./routes";
 
 const App = () => {
     const countriesData = useCountriesData();
@@ -19,14 +20,14 @@ const App = () => {
             <HashRouter>
                 <Header title="Where is the world?" themeName={themeName} toggleThemeName={toggleThemeName} />
                 <Switch>
-                    <Route path="/countries/:name">
+                    <Route path={toCountry()}>
                         <CountryPage countriesData={countriesData} />
                     </Route>
-                    <Route path="/countries">
+                    <Route path={toCountries()}>
                         <CountriesPage countriesData={countriesData} />
                     </Route>
                     <Route path="/">
-                        <Redirect to="/countries" />
+                        <Redirect to={toCountries()} />
                     </Route>
                 </Switch>
             </HashRouter>

@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export const Wrapper = styled.section`
     padding: 30px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.tablet}px){
+        padding: 20px;
+    }
 `;
 
 export const StyledButton = styled.button`

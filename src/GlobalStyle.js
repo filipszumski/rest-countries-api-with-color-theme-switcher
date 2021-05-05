@@ -17,14 +17,4 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-#root {
-  max-width: ${({ theme }) => theme.breakpoints.desktop}px;
-  margin: 0px auto;
-  padding: 15px 30px;
-
-  @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
-    padding: 15px 20px;
-  } 
-}
 `;

@@ -1,7 +1,8 @@
 import React from "react";
+import { StyledMain } from "./styled";
 
 export const Main = ({ children }) => (
-    <main className="main">
+    <StyledMain className="main">
         {children}
-    </main>
+    </StyledMain>
 )

@@ -20,6 +20,7 @@ export const FlagContainer = styled.div`
 
 export const Flag = styled.img`
     width: 100%;
+    max-width: 500px;
     object-fit: cover;
 
     @media(max-width: ${({ theme }) => theme.breakpoints.tablet}px){

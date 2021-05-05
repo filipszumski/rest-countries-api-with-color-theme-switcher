@@ -25,7 +25,7 @@ export const Flag = styled.img`
 
 export const CountryName = styled.h2`
     margin: 15px 0px 15px 15px;
-    font-size: ${({ theme }) => theme.fontSize.detailPage}px;
+    font-size: ${({ theme }) => theme.fontSize.desktopCountryName}px;
     font-weight: ${({ theme }) => theme.fontWeights.extraBold}
 `;
 

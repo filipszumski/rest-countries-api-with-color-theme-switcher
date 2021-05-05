@@ -2,14 +2,45 @@ import styled from "styled-components";
 
 export const Wrapper = styled.section`
     padding: 30px;
-    display: flex;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.tablet}px){
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
+    }
 `;
 
-export const Container = styled.div`
-    flex-grow: 1 0 50%;
+export const FlagContainer = styled.div`
+    @media(max-width: ${({ theme }) => theme.breakpoints.tablet}px){
+        justify-self: center;
+    }
 `;
 
 export const Flag = styled.img`
-    width: 300px;
+    width: 100%;
     object-fit: cover;
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.tablet}px){
+        max-width:400px;
+    }
+`;
+
+export const CoutryDataContainer = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    @media(max-width: ${({ theme }) => theme.breakpoints.desktop}px){
+        grid-template-columns: 1fr;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.tablet}px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
+        grid-template-columns: 1fr;
+    }
 `;

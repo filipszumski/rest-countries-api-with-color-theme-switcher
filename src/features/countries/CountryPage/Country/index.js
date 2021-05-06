@@ -1,14 +1,17 @@
 import React from "react";
+import { toCountry } from "../../../../routes";
 import {
     Wrapper,
     FlagContainer,
     Flag,
     CoutryDataContainer,
     CountryName,
-    PropertyName
+    PropertyName,
+    StyledLink,
+    BorderCountriesContainer,
 } from "./styled";
 
-export const Country = ({ selectedCountry }) => (
+export const Country = ({ selectedCountry, selectedCountryLaguages, selectedCountryBordersNames }) => (
     <Wrapper>
         <FlagContainer>
             <Flag src={selectedCountry.flag} alt={`${selectedCountry.name} Flag`}></Flag>
@@ -23,10 +26,18 @@ export const Country = ({ selectedCountry }) => (
                 <p><PropertyName>Capital: </PropertyName>{selectedCountry.capital}</p>
                 <p><PropertyName>Native Top Level Domain: </PropertyName>{selectedCountry.topLevelDomain}</p>
                 <p><PropertyName>Currencies: </PropertyName>{selectedCountry.nativeName}</p>
-                <p><PropertyName>Languages: </PropertyName>{selectedCountry.nativeName}</p>
+                <p><PropertyName>Languages: </PropertyName>{selectedCountryLaguages.join(", ")}</p>
             </CoutryDataContainer>
             <div>
-                <p><PropertyName>Border Countires: </PropertyName></p>
+                <BorderCountriesContainer>
+                    <PropertyName list>
+                        Border Countires:
+                    </PropertyName>
+                    {selectedCountryBordersNames.map(countryName => (
+                        <StyledLink to={toCountry(countryName)}>{countryName}</StyledLink>
+                    ))}
+
+                </BorderCountriesContainer>
             </div>
         </div>
     </Wrapper>

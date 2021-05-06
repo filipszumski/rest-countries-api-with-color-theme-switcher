@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import { Link } from "react-router-dom";
+import styled, { css } from "styled-components";
 
 export const Wrapper = styled.section`
     margin: 30px;
@@ -51,6 +52,27 @@ export const CountryName = styled.h2`
     font-weight: ${({ theme }) => theme.fontWeights.extraBold}
 `;
 
+export const BorderCountriesContainer = styled.p`
+    display: flex;
+    flex-wrap: wrap;
+`;
+
 export const PropertyName = styled.span`
     font-weight: ${({ theme }) => theme.fontWeights.semiBold};
+
+    ${({ list }) => list && css`
+    align-self: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    `}
+`;
+
+export const StyledLink = styled(Link)`
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    box-shadow: 1px 1px 5px 0px ${({ theme }) => theme.colors.input};
+    color: ${({ theme }) => theme.colors.text};
+    text-decoration: none;
+    background-color: ${({ theme }) => theme.colors.elements};
 `;

@@ -11,7 +11,7 @@ import {
 import { toCountry } from "../../../../routes";
 
 
-export const Countries = ({ countriesData, selectCountriesByQuery }) => {
+export const Countries = ({ countriesData, selectCountries }) => {
 
     return (
         <Wrapper>
@@ -24,7 +24,7 @@ export const Countries = ({ countriesData, selectCountriesByQuery }) => {
                         <p>Wystąpił błąd podczas pobierania danych</p>
                     )
                     : (
-                        countriesData.state === "success" && selectCountriesByQuery().map((country) => (
+                        countriesData.state === "success" && selectCountries().map((country) => (
 
                             <Item key={country.name}>
                                 <StyledLink to={toCountry(country.name)}>

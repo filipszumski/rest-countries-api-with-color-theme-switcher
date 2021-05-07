@@ -3,7 +3,8 @@ import { useHistory, useLocation } from "react-router";
 import { Wrapper, Input } from "./styled";
 import { filterQueryParamName } from "../../../filterQueryParamName";
 
-export const Filters = () => {
+export const Filters = ({ setRegion, region }) => {
+
     const location = useLocation();
     const history = useHistory();
     const searchParams = new URLSearchParams(location.search);
@@ -32,10 +33,12 @@ export const Filters = () => {
             <Input
                 as="select"
                 name="region"
+                value={region}
+                onChange={({ target }) => setRegion(target.value)}
             >
-                <option value="" selected hidden>Filter by Region</option>
+                <option value="" hidden>Filter by Region</option>
                 <option value="africa">Africa</option>
-                <option value="america">Americas</option>
+                <option value="americas">Americas</option>
                 <option value="asia">Asia</option>
                 <option value="europe">Europe</option>
                 <option value="oceania">Oceania</option>

@@ -2,7 +2,6 @@ import React from "react";
 import { StyledHeader, HeaderTitle, StyledButton, Wrapper } from "./styled";
 
 export const Header = ({ title, themeName, toggleThemeName }) => {
-    console.log(themeName);
 
     return (
         <Wrapper>

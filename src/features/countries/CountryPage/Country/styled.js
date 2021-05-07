@@ -60,7 +60,7 @@ export const BorderCountriesContainer = styled.p`
 export const PropertyName = styled.span`
     font-weight: ${({ theme }) => theme.fontWeights.semiBold};
 
-    ${({ list }) => list && css`
+    ${({ borders }) => borders && css`
     align-self: center;
     margin-right: 10px;
     margin-bottom: 10px;

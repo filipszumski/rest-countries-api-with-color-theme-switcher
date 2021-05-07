@@ -30,11 +30,11 @@ export const Country = ({ selectedCountry, selectedCountryLaguages, selectedCoun
             </CoutryDataContainer>
             <div>
                 <BorderCountriesContainer>
-                    <PropertyName list>
+                    <PropertyName borders>
                         Border Countires:
                     </PropertyName>
                     {selectedCountryBordersNames.map(countryName => (
-                        <StyledLink to={toCountry(countryName)}>{countryName}</StyledLink>
+                        <StyledLink key={countryName} to={toCountry(countryName)}>{countryName}</StyledLink>
                     ))}
 
                 </BorderCountriesContainer>

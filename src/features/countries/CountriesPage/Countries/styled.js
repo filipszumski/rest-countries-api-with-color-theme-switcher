@@ -4,36 +4,33 @@ import { Link } from "react-router-dom";
 export const Wrapper = styled.section`
     margin: 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     justify-content: space-evenly;
-    gap: 50px;
-
-    @media(max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
-        grid-template-columns: 1fr;
-    }
+    gap: 75px;
 `;
 
 export const Item = styled.div`
-    display:flex;
-    flex-wrap: wrap;
-    align-items: center;
     background-color: ${({ theme }) => theme.colors.elements};
     box-shadow: 1px 1px 5px 0px ${({ theme }) => theme.colors.input};
 `;
 
-export const Flag = styled.img`
-    height: 120px;
-    width: 200px;
-    object-fit: cover;
+export const StyledLink = styled(Link)`
+    color: ${({ theme }) => theme.colors.text};
+    text-decoration: none;
+`;
 
-    @media(max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
-        width: 100%;
-        height: 100%;
-    }
+export const FlagContainer = styled.div`
+    position: relative;
+    height: 0;
+    width: 100%;
+    padding-bottom: 56.25%;
+`;
+
+export const Flag = styled.img`
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
 `;
 
 export const CountryName = styled.h2`
@@ -43,7 +40,6 @@ export const CountryName = styled.h2`
 `;
 
 export const CountryInfo = styled.p`
-    flex: 1 0 100%;
     margin: 5px 0px 5px 15px;
 
     ${({ first }) => first && css`
@@ -57,9 +53,4 @@ export const CountryInfo = styled.p`
 
 export const PropertyName = styled.span`
     font-weight: ${({ theme }) => theme.fontWeights.semiBold};
-`;
-
-export const StyledLink = styled(Link)`
-    color: ${({ theme }) => theme.colors.text};
-    text-decoration: none;
 `;

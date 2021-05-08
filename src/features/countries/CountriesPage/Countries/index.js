@@ -6,7 +6,8 @@ import {
     CountryName,
     CountryInfo,
     PropertyName,
-    StyledLink
+    StyledLink,
+    FlagContainer,
 } from "./styled";
 import { toCountry } from "../../../../routes";
 
@@ -28,7 +29,9 @@ export const Countries = ({ countriesData, selectCountries }) => {
 
                             <Item key={country.name}>
                                 <StyledLink to={toCountry(country.name)}>
-                                    <Flag src={country.flag} alt={country.name}></Flag>
+                                    <FlagContainer>
+                                        <Flag src={country.flag} alt={country.name}></Flag>
+                                    </FlagContainer>
                                     <CountryName>{country.name}</CountryName>
                                     <CountryInfo first><PropertyName >Population: </PropertyName>{country.population}</CountryInfo>
                                     <CountryInfo><PropertyName>Region: </PropertyName>{country.region}</CountryInfo>

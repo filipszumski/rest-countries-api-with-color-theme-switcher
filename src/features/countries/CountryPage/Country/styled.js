@@ -75,4 +75,5 @@ export const StyledLink = styled(Link)`
     color: ${({ theme }) => theme.colors.text};
     text-decoration: none;
     background-color: ${({ theme }) => theme.colors.elements};
+    border-radius: 5px;
 `;

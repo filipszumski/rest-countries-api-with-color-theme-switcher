@@ -18,12 +18,13 @@ export const StyledButton = styled.button`
     grid-template-columns: repeat(2, auto);
     gap: 7px;
     align-items: center;
-    margin-left: 10px;
+    margin-left: 8px;
     padding: 7px;
     color: ${({ theme }) => theme.colors.text};
     background-color: ${({ theme }) => theme.colors.elements};
     border: none;
     box-shadow: 1px 1px 5px 0px ${({ theme }) => theme.colors.input};
+    border-radius: 5px;
 `;
 
 export const Wrapper = styled.div`

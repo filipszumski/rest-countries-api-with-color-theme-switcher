@@ -12,6 +12,7 @@ export const Wrapper = styled.section`
 export const Item = styled.div`
     background-color: ${({ theme }) => theme.colors.elements};
     box-shadow: 1px 1px 5px 0px ${({ theme }) => theme.colors.input};
+    border-radius: 5px;
 `;
 
 export const StyledLink = styled(Link)`
@@ -31,6 +32,8 @@ export const Flag = styled.img`
     height: 100%;
     position: absolute;
     object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 `;
 
 export const CountryName = styled.h2`

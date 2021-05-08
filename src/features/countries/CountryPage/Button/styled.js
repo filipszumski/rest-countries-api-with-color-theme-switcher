@@ -11,5 +11,6 @@ export const StyledButton = styled.button`
     background-color: ${({ theme }) => theme.colors.elements};
     border: none;
     box-shadow: 1px 1px 5px 0px ${({ theme }) => theme.colors.input};
+    border-radius: 5px;
 
 `;

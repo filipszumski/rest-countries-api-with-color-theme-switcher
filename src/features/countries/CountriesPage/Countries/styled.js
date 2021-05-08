@@ -7,6 +7,14 @@ export const Wrapper = styled.section`
     grid-template-columns: repeat(auto-fill, 200px);
     justify-content: space-evenly;
     gap: 50px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        grid-template-columns: 1fr;
+    }
 `;
 
 export const Item = styled.div`
@@ -21,6 +29,11 @@ export const Flag = styled.img`
     height: 120px;
     width: 200px;
     object-fit: cover;
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+        width: 100%;
+        height: 100%;
+    }
 `;
 
 export const CountryName = styled.h2`

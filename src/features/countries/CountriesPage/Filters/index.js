@@ -36,7 +36,7 @@ export const Filters = ({ setRegion, region }) => {
                 value={region}
                 onChange={({ target }) => setRegion(target.value)}
             >
-                <option value="" hidden>Filter by Region</option>
+                <option value="">{region ? "All" : "Filter by region"}</option>
                 <option value="africa">Africa</option>
                 <option value="americas">Americas</option>
                 <option value="asia">Asia</option>

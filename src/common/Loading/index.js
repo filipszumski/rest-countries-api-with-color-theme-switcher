@@ -1,7 +1,7 @@
 import React from "react";
-import { StyledLoading } from "./styled";
+import ReactLoading from "react-loading";
 
 export const Loading = () => (
-    <StyledLoading type="spinningBubbles" color={"black"} height={"5%"} width={"5%"} />
+    <ReactLoading type="spinningBubbles" color="black" height="100%" width="100%" />
 )
 

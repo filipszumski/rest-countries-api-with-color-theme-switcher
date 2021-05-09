@@ -10,15 +10,16 @@ import {
     FlagContainer,
 } from "./styled";
 import { toCountry } from "../../../../routes";
+import { Loading } from "../../../../common/Loading";
 
 
 export const Countries = ({ countriesData, selectCountries }) => {
 
     return (
-        <Wrapper>
+        <Wrapper loading={countriesData.state === "loading"}>
             {countriesData.state === "loading"
                 ? (
-                    <p>Trwa ładowanie...</p>
+                    <Loading />
                 )
                 : countriesData.state === "error"
                     ? (

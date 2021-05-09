@@ -7,6 +7,18 @@ export const Wrapper = styled.section`
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     justify-content: space-evenly;
     gap: 75px;
+
+    ${({ loading }) => loading && css`
+        display: block;
+        max-width: 100px;
+        margin: 30px auto;
+        padding-top: 10%;
+
+        @media(max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+            max-width: 75px; 
+            padding-top: 15%;
+        }
+    `}
 `;
 
 export const Item = styled.div`

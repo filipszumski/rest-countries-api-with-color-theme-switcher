@@ -7,6 +7,7 @@ export const Wrapper = styled.section`
 export const StyledButton = styled.button`
     width: 120px;
     padding: 10px;
+    margin-right: 10px;
     color: ${({ theme }) => theme.colors.text};
     background-color: ${({ theme }) => theme.colors.elements};
     border: none;

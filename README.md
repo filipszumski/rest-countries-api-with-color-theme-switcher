@@ -1,6 +1,45 @@
-# Getting Started with Create React App
+# REST countries API with theme switcher
+
+Link: https://filipszumski.github.io/rest-countries-api-with-color-theme-switcher/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Description
+
+This is application for showing info about countries. You are able to look through list of all countries, filtering countries by name or region and view country detailed info by clicing on country item. You can also toggle between themes.
+## Technologies used
+
+- HTML
+- CSS
+- JavaScript ES6+
+- React
+- React Router
+- Styled Components
+- create-react-app
+- npm
+- Webpack
+- Babel
+- axios
+
+## External Sources
+
+- https://restcountries.eu/ Countries info RESTful API
+
+## Features
+
+- Displaying all countries from the API on the homepage
+- Filtering for a country by its name or region
+- Viewing country info detailed information on separate page
+- Clicking one of border countries on country details page will take you to this country page
+- Switching between themes
+
+## My other projects
+
+- [Tasks List](https://filipszumski.github.io/tasks-list/)
+- [Currency Converter](https://filipszumski.github.io/currency-converter/)
+- [Tasks List React](https://filipszumski.github.io/tasks-list-react/)
+- [Currency Converter And Data](https://filipszumski.github.io/currency-converter-and-data-react/)
+- [Crowdfunding Product Page](https://filipszumski.github.io/crowdfunding-product-page/)
 
 ## Available Scripts
 

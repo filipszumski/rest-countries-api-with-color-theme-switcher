@@ -9,6 +9,9 @@ export const Filters = ({ setRegion, region }) => {
     const history = useHistory();
     const searchParams = new URLSearchParams(location.search);
 
+    console.log(searchParams.toString());
+    console.log(location);
+
     const onInputChange = ({ target }) => {
 
         if (target.value.trim() === "") {

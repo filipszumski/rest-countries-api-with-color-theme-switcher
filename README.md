@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Description
 
-This is application for showing info about countries. You are able to look through list of all countries, filtering countries by name or region and view country detailed info by clicing on country item. You can also toggle between themes.
+This is application for showing info about countries. You are able to look through list of all countries, filtering countries by name or region and view country detailed info by clicking on country item. You can also toggle between themes.
 ## Technologies used
 
 - HTML
@@ -29,7 +29,7 @@ This is application for showing info about countries. You are able to look throu
 
 - Displaying all countries from the API on the homepage
 - Filtering for a country by its name or region
-- Viewing country info detailed information on separate page
+- Viewing country detailed information on separate page
 - Clicking one of border countries on country details page will take you to this country page
 - Switching between themes
 

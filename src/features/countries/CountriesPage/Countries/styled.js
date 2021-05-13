@@ -8,7 +8,7 @@ export const Wrapper = styled.section`
     justify-content: space-evenly;
     gap: 75px;
 
-    ${({ loading }) => loading && css`
+    ${({ isLoading }) => isLoading && css`
         display: block;
         max-width: 100px;
         margin: 30px auto;

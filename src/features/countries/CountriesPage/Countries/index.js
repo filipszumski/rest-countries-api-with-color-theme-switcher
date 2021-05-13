@@ -16,7 +16,7 @@ import { Loading } from "../../../../common/Loading";
 export const Countries = ({ countriesData, selectCountries }) => {
 
     return (
-        <Wrapper loading={countriesData.state === "loading"}>
+        <Wrapper isLoading={countriesData.state === "loading"}>
             {countriesData.state === "loading"
                 ? (
                     <Loading />

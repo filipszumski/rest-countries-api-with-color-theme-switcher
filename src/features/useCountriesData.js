@@ -13,14 +13,18 @@ export const useCountriesData = () => {
         const fetchData = async () => {
             try {
                 const response = await countriesInfo;
-                setCountriesData({
-                    state: "success",
-                    countries: response
-                })
+                if (mounted.current) {
+                    setCountriesData({
+                        state: "success",
+                        countries: response
+                    })
+                }
             } catch {
-                setCountriesData({
-                    state: "error",
-                })
+                if (mounted.current) {
+                    setCountriesData({
+                        state: "error",
+                    })
+                }
             }
         }
 

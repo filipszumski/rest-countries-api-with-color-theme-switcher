@@ -1,23 +1,19 @@
 import React from "react";
-import { useHistory, useLocation } from "react-router";
 import { Wrapper, Input } from "./styled";
 import { filterQueryParamName } from "../../../filterQueryParamName";
+import { useQueryParameter, useReplaceQueryParameter } from "../../queryParameter";
 
 export const Filters = ({ setRegion, region }) => {
 
-    const location = useLocation();
-    const history = useHistory();
-    const searchParams = new URLSearchParams(location.search);
+    const queryParameter = useQueryParameter(filterQueryParamName);
+    const replaceQueryParameter = useReplaceQueryParameter();
 
     const onInputChange = ({ target }) => {
 
-        if (target.value.trim() === "") {
-            searchParams.delete(filterQueryParamName);
-        } else {
-            searchParams.set(filterQueryParamName, target.value)
-        }
-
-        history.push(`${location.pathname}?${searchParams.toString()}`)
+        replaceQueryParameter({
+            key: filterQueryParamName,
+            value: target.value.trim() !== "" ? target.value : undefined,
+        });
     }
 
     return (
@@ -27,7 +23,7 @@ export const Filters = ({ setRegion, region }) => {
                 placeholder='Search for a country...'
                 name="country"
                 type="text"
-                value={searchParams.get(filterQueryParamName) || ""}
+                value={queryParameter || ""}
                 onChange={onInputChange}
             />
             <Input

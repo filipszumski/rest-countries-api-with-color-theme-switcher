@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router";
 import { Main } from "../../../common/Main";
 import { Filters } from "./Filters";
 import { Countries } from "./Countries";
 import { filterQueryParamName } from "../../filterQueryParamName";
+import { useQueryParameter } from "../queryParameter";
 
 export function CountriesPage({ countriesData }) {
   const [region, setRegion] = useState("");
-  const location = useLocation();
-  const query = (new URLSearchParams(location.search)).get(filterQueryParamName);
+  const queryParameter = useQueryParameter(filterQueryParamName);
 
   const selectCountriesByRegion = () => {
     if (countriesData.state === "success" && region) {
@@ -19,10 +18,10 @@ export function CountriesPage({ countriesData }) {
   };
 
   const selectCountriesByQuery = (countries) => {
-    if (countriesData.state === "success" && query && query.trim() !== "") {
+    if (countriesData.state === "success" && queryParameter && queryParameter.trim() !== "") {
       return countries.filter(country => {
         const countryNameUppercased = country.name.toUpperCase();
-        const queryTrimmedUppercased = query.trim().toUpperCase();
+        const queryTrimmedUppercased = queryParameter.trim().toUpperCase();
 
         return countryNameUppercased.includes(queryTrimmedUppercased);
       });

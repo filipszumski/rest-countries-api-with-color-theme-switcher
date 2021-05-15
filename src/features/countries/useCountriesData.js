@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import countriesInfo from "../services/countries.json";
+import countriesInfo from "../../services/countries.json";
 
 export const useCountriesData = () => {
     const [countriesData, setCountriesData] = useState(({

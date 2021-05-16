@@ -1,11 +1,9 @@
 import React from "react";
 import { Wrapper, Input } from "./styled";
 import { filterQueryParamName } from "../../../filterQueryParamName";
-import { useQueryParameter, useReplaceQueryParameter } from "../../queryParameter";
+import { useReplaceQueryParameter } from "../../queryParameter";
 
-export const Filters = ({ setRegion, region }) => {
-
-    const queryParameter = useQueryParameter(filterQueryParamName);
+export const Filters = ({ setRegion, region, queryParameter }) => {
     const replaceQueryParameter = useReplaceQueryParameter();
 
     const onInputChange = ({ target }) => {

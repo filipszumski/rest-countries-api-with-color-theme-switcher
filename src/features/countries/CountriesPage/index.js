@@ -8,37 +8,11 @@ import { useQueryParameter } from "../queryParameter";
 export function CountriesPage({ countriesData }) {
   const [region, setRegion] = useState("");
   const queryParameter = useQueryParameter(filterQueryParamName);
-
-  const selectCountriesByRegion = () => {
-    if (countriesData.state === "success" && region) {
-      return countriesData.countries.filter(country => country.region.toUpperCase() === region.toUpperCase());
-    }
-
-    return countriesData.countries;
-  };
-
-  const selectCountriesByQuery = (countries) => {
-    if (countriesData.state === "success" && queryParameter && queryParameter.trim() !== "") {
-      return countries.filter(country => {
-        const countryNameUppercased = country.name.toUpperCase();
-        const queryTrimmedUppercased = queryParameter.trim().toUpperCase();
-
-        return countryNameUppercased.includes(queryTrimmedUppercased);
-      });
-    }
-    return countries;
-  };
-
-  const selectCountries = () => {
-    const countries = selectCountriesByRegion();
-
-    return selectCountriesByQuery(countries);
-  }
-
+ 
   return (
     <Main>
-      <Filters setRegion={setRegion} region={region} />
-      <Countries selectCountries={selectCountries} countriesData={countriesData} />
+      <Filters setRegion={setRegion} region={region} queryParameter={queryParameter} />
+      <Countries countriesData={countriesData} region={region} queryParameter={queryParameter} />
     </Main>
   );
 }

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Loading } from "./common/Loading";
 
 
 export const useTheme = () => {

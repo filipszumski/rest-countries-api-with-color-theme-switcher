@@ -11,9 +11,11 @@ import {
 } from "./styled";
 import { toCountry } from "../../../../routes";
 import { Loading } from "../../../../common/Loading";
+import { useSelectCountries } from "../../useSelectCountries";
 
 
-export const Countries = ({ countriesData, selectCountries }) => {
+export const Countries = ({ countriesData, region, queryParameter }) => {
+    const selectCountries = useSelectCountries(countriesData, region, queryParameter);
 
     return (
         <Wrapper isLoading={countriesData.state === "loading"}>

@@ -35,11 +35,12 @@ This is application for showing info about countries. You are able to look throu
 
 ## My other projects
 
-- [Tasks List](https://filipszumski.github.io/tasks-list/)
-- [Currency Converter](https://filipszumski.github.io/currency-converter/)
-- [Tasks List React](https://filipszumski.github.io/tasks-list-react/)
-- [Currency Converter And Data](https://filipszumski.github.io/currency-converter-and-data-react/)
-- [Crowdfunding Product Page](https://filipszumski.github.io/crowdfunding-product-page/)
+- [Tasks List](https://github.com/filipszumski/tasks-list)
+- [Currency Converter](https://github.com/filipszumski/currency-converter)
+- [Tasks List React](https://github.com/filipszumski/tasks-list-react)
+- [Currency Converter And Data](https://github.com/filipszumski/currency-converter-and-data-react)
+- [Crowdfunding Product Page](https://github.com/filipszumski/crowdfunding-product-page)
+- [Invoice App](https://github.com/filipszumski/invoice-app)
 
 ## Available Scripts
 
